@@ -1,4 +1,4 @@
-import { BaseWalletAdapter, WalletReadyState } from '@solana/wallet-adapter-base';
+import { BaseWalletAdapter, WalletReadyState } from 'sol-wallet-adapter-base';
 import { act } from 'react-dom/test-utils';
 
 export abstract class MockWalletAdapter extends BaseWalletAdapter {

@@ -6,53 +6,53 @@ import pkg from '../../package.json';
 import { useAutoConnect } from '../components/AutoConnectProvider';
 
 const AntDesignWalletConnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-ant-design')).WalletConnectButton,
+    async () => (await import('sol-wallet-adapter-ant-design')).WalletConnectButton,
     { ssr: false }
 );
 const AntDesignWalletDisconnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-ant-design')).WalletDisconnectButton,
+    async () => (await import('sol-wallet-adapter-ant-design')).WalletDisconnectButton,
     { ssr: false }
 );
 const AntDesignWalletMultiButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-ant-design')).WalletMultiButton,
+    async () => (await import('sol-wallet-adapter-ant-design')).WalletMultiButton,
     { ssr: false }
 );
 const AntDesignWalletModalButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-ant-design')).WalletModalButton,
+    async () => (await import('sol-wallet-adapter-ant-design')).WalletModalButton,
     { ssr: false }
 );
 
 const MaterialUIWalletConnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-material-ui')).WalletConnectButton,
+    async () => (await import('sol-wallet-adapter-material-ui')).WalletConnectButton,
     { ssr: false }
 );
 const MaterialUIWalletDisconnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-material-ui')).WalletDisconnectButton,
+    async () => (await import('sol-wallet-adapter-material-ui')).WalletDisconnectButton,
     { ssr: false }
 );
 const MaterialUIWalletDialogButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-material-ui')).WalletDialogButton,
+    async () => (await import('sol-wallet-adapter-material-ui')).WalletDialogButton,
     { ssr: false }
 );
 const MaterialUIWalletMultiButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-material-ui')).WalletMultiButton,
+    async () => (await import('sol-wallet-adapter-material-ui')).WalletMultiButton,
     { ssr: false }
 );
 
 const ReactUIWalletConnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-react-ui')).WalletConnectButton,
+    async () => (await import('sol-wallet-adapter-react-ui')).WalletConnectButton,
     { ssr: false }
 );
 const ReactUIWalletDisconnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-react-ui')).WalletDisconnectButton,
+    async () => (await import('sol-wallet-adapter-react-ui')).WalletDisconnectButton,
     { ssr: false }
 );
 const ReactUIWalletMultiButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
+    async () => (await import('sol-wallet-adapter-react-ui')).WalletMultiButton,
     { ssr: false }
 );
 const ReactUIWalletModalButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-react-ui')).WalletModalButton,
+    async () => (await import('sol-wallet-adapter-react-ui')).WalletModalButton,
     { ssr: false }
 );
 

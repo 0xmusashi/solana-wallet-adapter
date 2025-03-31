@@ -9,7 +9,7 @@ overrides:
   '@ledgerhq/errors': 6.16.3
   '@ledgerhq/hw-transport': 6.27.1
   '@ledgerhq/hw-transport-webhid': 6.27.1
-  '@solana/wallet-adapter-base': workspace:^
+  sol-wallet-adapter-base: workspace:^
   '@types/web': npm:typescript@~4.7.4
   eslint: 8.22.0
   '@ngraveio/bc-ur': 1.1.12
@@ -100,12 +100,12 @@ importers:
       '@solana-mobile/wallet-adapter-mobile':
         specifier: ^2.0.0
         version: 2.0.1(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(react-native@0.72.3(@babel/core@7.22.9)(@babel/preset-env@7.22.9(@babel/core@7.22.9))(bufferutil@4.0.7)(react@18.2.0)(utf-8-validate@5.0.10))
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../base
       '@solana/wallet-standard-wallet-adapter-react':
         specifier: ^1.1.0
-        version: 1.1.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)(react@18.2.0)
+        version: 1.1.0(@solana/wallet-adapter-base@0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)))(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)(react@18.2.0)
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -143,18 +143,6 @@ importers:
 
   packages/starter/create-react-app-starter:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
-      '@solana/wallet-adapter-react':
-        specifier: workspace:^
-        version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
-        specifier: workspace:^
-        version: link:../../ui/react-ui
-      '@solana/wallet-adapter-wallets':
-        specifier: workspace:^
-        version: link:../../wallets/wallets
       '@solana/web3.js':
         specifier: ^1.77.3
         version: 1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
@@ -170,6 +158,18 @@ importers:
       react-scripts:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.22.5(@babel/core@7.22.9))(@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.22.9))(@types/babel__core@7.20.1)(bufferutil@4.0.7)(eslint@8.22.0)(react@18.2.0)(type-fest@0.21.3)(typescript@5.8.2)(utf-8-validate@5.0.10)
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
+      sol-wallet-adapter-react:
+        specifier: workspace:^
+        version: link:../../core/react
+      sol-wallet-adapter-react-ui:
+        specifier: workspace:^
+        version: link:../../ui/react-ui
+      sol-wallet-adapter-wallets:
+        specifier: workspace:^
+        version: link:../../wallets/wallets
       web-vitals:
         specifier: ^2.1.4
         version: 2.1.4
@@ -249,24 +249,6 @@ importers:
       '@noble/curves':
         specifier: ^1.1.0
         version: 1.1.0
-      '@solana/wallet-adapter-ant-design':
-        specifier: workspace:^
-        version: link:../../ui/ant-design
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
-      '@solana/wallet-adapter-material-ui':
-        specifier: workspace:^
-        version: link:../../ui/material-ui
-      '@solana/wallet-adapter-react':
-        specifier: workspace:^
-        version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
-        specifier: workspace:^
-        version: link:../../ui/react-ui
-      '@solana/wallet-adapter-wallets':
-        specifier: workspace:^
-        version: link:../../wallets/wallets
       '@solana/wallet-standard-features':
         specifier: ^1.1.0
         version: 1.1.0
@@ -294,6 +276,24 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      sol-wallet-adapter-ant-design:
+        specifier: workspace:^
+        version: link:../../ui/ant-design
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
+      sol-wallet-adapter-material-ui:
+        specifier: workspace:^
+        version: link:../../ui/material-ui
+      sol-wallet-adapter-react:
+        specifier: workspace:^
+        version: link:../../core/react
+      sol-wallet-adapter-react-ui:
+        specifier: workspace:^
+        version: link:../../ui/react-ui
+      sol-wallet-adapter-wallets:
+        specifier: workspace:^
+        version: link:../../wallets/wallets
     devDependencies:
       '@types/bs58':
         specifier: ^4.0.1
@@ -340,18 +340,6 @@ importers:
       '@mui/material':
         specifier: ^5.13.5
         version: 5.14.1(@emotion/react@11.11.1(@types/react@18.2.15)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.2.15)(react@18.2.0))(@types/react@18.2.15)(react@18.2.0))(@types/react@18.2.15)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
-      '@solana/wallet-adapter-material-ui':
-        specifier: workspace:^
-        version: link:../../ui/material-ui
-      '@solana/wallet-adapter-react':
-        specifier: workspace:^
-        version: link:../../core/react
-      '@solana/wallet-adapter-wallets':
-        specifier: workspace:^
-        version: link:../../wallets/wallets
       '@solana/web3.js':
         specifier: ^1.77.3
         version: 1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
@@ -364,6 +352,18 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
+      sol-wallet-adapter-material-ui:
+        specifier: workspace:^
+        version: link:../../ui/material-ui
+      sol-wallet-adapter-react:
+        specifier: workspace:^
+        version: link:../../core/react
+      sol-wallet-adapter-wallets:
+        specifier: workspace:^
+        version: link:../../wallets/wallets
     devDependencies:
       '@types/react':
         specifier: ^18.2.13
@@ -389,18 +389,6 @@ importers:
 
   packages/starter/nextjs-starter:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
-      '@solana/wallet-adapter-react':
-        specifier: workspace:^
-        version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
-        specifier: workspace:^
-        version: link:../../ui/react-ui
-      '@solana/wallet-adapter-wallets':
-        specifier: workspace:^
-        version: link:../../wallets/wallets
       next:
         specifier: ^12.3.4
         version: 12.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -410,6 +398,18 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
+      sol-wallet-adapter-react:
+        specifier: workspace:^
+        version: link:../../core/react
+      sol-wallet-adapter-react-ui:
+        specifier: workspace:^
+        version: link:../../ui/react-ui
+      sol-wallet-adapter-wallets:
+        specifier: workspace:^
+        version: link:../../wallets/wallets
     devDependencies:
       '@types/node-fetch':
         specifier: ^2.6.4
@@ -438,18 +438,6 @@ importers:
 
   packages/starter/react-ui-starter:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
-      '@solana/wallet-adapter-react':
-        specifier: workspace:^
-        version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
-        specifier: workspace:^
-        version: link:../../ui/react-ui
-      '@solana/wallet-adapter-wallets':
-        specifier: workspace:^
-        version: link:../../wallets/wallets
       '@solana/web3.js':
         specifier: ^1.77.3
         version: 1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
@@ -459,6 +447,18 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
+      sol-wallet-adapter-react:
+        specifier: workspace:^
+        version: link:../../core/react
+      sol-wallet-adapter-react-ui:
+        specifier: workspace:^
+        version: link:../../ui/react-ui
+      sol-wallet-adapter-wallets:
+        specifier: workspace:^
+        version: link:../../wallets/wallets
     devDependencies:
       '@types/react':
         specifier: ^18.2.13
@@ -484,13 +484,13 @@ importers:
 
   packages/ui/ant-design:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-adapter-base-ui':
+      sol-wallet-adapter-base-ui:
         specifier: workspace:^
         version: link:../base-ui
-      '@solana/wallet-adapter-react':
+      sol-wallet-adapter-react:
         specifier: workspace:^
         version: link:../../core/react
     devDependencies:
@@ -521,7 +521,7 @@ importers:
 
   packages/ui/base-ui:
     dependencies:
-      '@solana/wallet-adapter-react':
+      sol-wallet-adapter-react:
         specifier: workspace:^
         version: link:../../core/react
     devDependencies:
@@ -543,13 +543,13 @@ importers:
 
   packages/ui/material-ui:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-adapter-base-ui':
+      sol-wallet-adapter-base-ui:
         specifier: workspace:^
         version: link:../base-ui
-      '@solana/wallet-adapter-react':
+      sol-wallet-adapter-react:
         specifier: workspace:^
         version: link:../../core/react
     devDependencies:
@@ -586,13 +586,13 @@ importers:
 
   packages/ui/react-ui:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-adapter-base-ui':
+      sol-wallet-adapter-base-ui:
         specifier: workspace:^
         version: link:../base-ui
-      '@solana/wallet-adapter-react':
+      sol-wallet-adapter-react:
         specifier: workspace:^
         version: link:../../core/react
     devDependencies:
@@ -617,7 +617,7 @@ importers:
 
   packages/wallets/alpha:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -630,7 +630,7 @@ importers:
 
   packages/wallets/avana:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -643,7 +643,7 @@ importers:
 
   packages/wallets/bitkeep:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -656,7 +656,7 @@ importers:
 
   packages/wallets/bitpie:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -669,7 +669,7 @@ importers:
 
   packages/wallets/clover:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -682,12 +682,12 @@ importers:
 
   packages/wallets/coin98:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       bs58:
         specifier: ^4.0.1
         version: 4.0.1
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -701,7 +701,7 @@ importers:
 
   packages/wallets/coinbase:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -714,7 +714,7 @@ importers:
 
   packages/wallets/coinhub:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -729,8 +729,8 @@ importers:
     dependencies:
       '@fractalwagmi/solana-wallet-adapter':
         specifier: ^0.1.1
-        version: 0.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@solana/wallet-adapter-base':
+        version: 0.1.1(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -743,7 +743,7 @@ importers:
 
   packages/wallets/huobi:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -756,7 +756,7 @@ importers:
 
   packages/wallets/hyperpay:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -772,7 +772,7 @@ importers:
       '@keystonehq/sol-keyring':
         specifier: ^0.20.0
         version: 0.20.0(bufferutil@4.0.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(utf-8-validate@5.0.10)
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -785,7 +785,7 @@ importers:
 
   packages/wallets/krystal:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -807,12 +807,12 @@ importers:
       '@ledgerhq/hw-transport-webhid':
         specifier: 6.27.1
         version: 6.27.1
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -826,7 +826,7 @@ importers:
 
   packages/wallets/mathwallet:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -839,7 +839,7 @@ importers:
 
   packages/wallets/neko:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -852,7 +852,7 @@ importers:
 
   packages/wallets/nightly:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -865,7 +865,7 @@ importers:
 
   packages/wallets/nufi:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -878,7 +878,7 @@ importers:
 
   packages/wallets/onto:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -894,7 +894,7 @@ importers:
       '@particle-network/solana-wallet':
         specifier: ^1.3.2
         version: 1.3.2(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -910,7 +910,7 @@ importers:
 
   packages/wallets/phantom:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -923,7 +923,7 @@ importers:
 
   packages/wallets/safepal:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -936,7 +936,7 @@ importers:
 
   packages/wallets/saifu:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -949,12 +949,12 @@ importers:
 
   packages/wallets/salmon:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       salmon-adapter-sdk:
         specifier: ^1.1.1
         version: 1.1.1(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -965,7 +965,7 @@ importers:
 
   packages/wallets/sky:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -978,9 +978,6 @@ importers:
 
   packages/wallets/solflare:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       '@solana/wallet-standard-chains':
         specifier: ^1.1.0
         version: 1.1.0
@@ -993,6 +990,9 @@ importers:
       '@wallet-standard/wallet':
         specifier: ^1.0.1
         version: 1.0.1
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -1003,7 +1003,7 @@ importers:
 
   packages/wallets/solong:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -1016,7 +1016,7 @@ importers:
 
   packages/wallets/spot:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -1029,7 +1029,7 @@ importers:
 
   packages/wallets/tokenary:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -1042,7 +1042,7 @@ importers:
 
   packages/wallets/tokenpocket:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -1055,9 +1055,6 @@ importers:
 
   packages/wallets/torus:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       '@toruslabs/solana-embed':
         specifier: ^0.3.4
         version: 0.3.4(@babel/runtime@7.22.6)(bufferutil@4.0.7)(utf-8-validate@5.0.10)
@@ -1070,6 +1067,9 @@ importers:
       process:
         specifier: ^0.11.10
         version: 0.11.10
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
       stream-browserify:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1092,15 +1092,15 @@ importers:
 
   packages/wallets/trezor:
     dependencies:
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       '@trezor/connect-web':
         specifier: ^9.5.2
         version: 9.5.2(@solana/sysvars@2.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.2))(bufferutil@4.0.7)(expo-constants@15.4.5(expo@50.0.11(@babel/core@7.22.9)(@react-native/babel-preset@0.73.21(@babel/core@7.22.9)(@babel/preset-env@7.22.9(@babel/core@7.22.9)))(bufferutil@4.0.7)(utf-8-validate@5.0.10)))(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.72.3(@babel/core@7.22.9)(@babel/preset-env@7.22.9(@babel/core@7.22.9))(bufferutil@4.0.7)(react@18.2.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.2)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.7)(utf-8-validate@5.0.10))
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -1111,7 +1111,7 @@ importers:
 
   packages/wallets/trust:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -1127,15 +1127,15 @@ importers:
       '@noble/curves':
         specifier: ^1.1.0
         version: 1.1.0
-      '@solana/wallet-adapter-base':
-        specifier: workspace:^
-        version: link:../../core/base
       '@solana/wallet-standard-features':
         specifier: ^1.1.0
         version: 1.1.0
       '@solana/wallet-standard-util':
         specifier: ^1.1.0
         version: 1.1.0
+      sol-wallet-adapter-base:
+        specifier: workspace:^
+        version: link:../../core/base
     devDependencies:
       '@solana/web3.js':
         specifier: ^1.77.3
@@ -1149,7 +1149,7 @@ importers:
       '@jnwng/walletconnect-solana':
         specifier: ^0.2.0
         version: 0.2.0(@react-native-async-storage/async-storage@1.19.1(react-native@0.72.3(@babel/core@7.22.9)(@babel/preset-env@7.22.9(@babel/core@7.22.9))(bufferutil@4.0.7)(react@18.2.0)(utf-8-validate@5.0.10)))(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bufferutil@4.0.7)(utf-8-validate@5.0.10)
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -1168,112 +1168,112 @@ importers:
 
   packages/wallets/wallets:
     dependencies:
-      '@solana/wallet-adapter-alpha':
+      sol-wallet-adapter-alpha:
         specifier: workspace:^
         version: link:../alpha
-      '@solana/wallet-adapter-avana':
+      sol-wallet-adapter-avana:
         specifier: workspace:^
         version: link:../avana
-      '@solana/wallet-adapter-bitkeep':
+      sol-wallet-adapter-bitkeep:
         specifier: workspace:^
         version: link:../bitkeep
-      '@solana/wallet-adapter-bitpie':
+      sol-wallet-adapter-bitpie:
         specifier: workspace:^
         version: link:../bitpie
-      '@solana/wallet-adapter-clover':
+      sol-wallet-adapter-clover:
         specifier: workspace:^
         version: link:../clover
-      '@solana/wallet-adapter-coin98':
+      sol-wallet-adapter-coin98:
         specifier: workspace:^
         version: link:../coin98
-      '@solana/wallet-adapter-coinbase':
+      sol-wallet-adapter-coinbase:
         specifier: workspace:^
         version: link:../coinbase
-      '@solana/wallet-adapter-coinhub':
+      sol-wallet-adapter-coinhub:
         specifier: workspace:^
         version: link:../coinhub
-      '@solana/wallet-adapter-fractal':
+      sol-wallet-adapter-fractal:
         specifier: workspace:^
         version: link:../fractal
-      '@solana/wallet-adapter-huobi':
+      sol-wallet-adapter-huobi:
         specifier: workspace:^
         version: link:../huobi
-      '@solana/wallet-adapter-hyperpay':
+      sol-wallet-adapter-hyperpay:
         specifier: workspace:^
         version: link:../hyperpay
-      '@solana/wallet-adapter-keystone':
+      sol-wallet-adapter-keystone:
         specifier: workspace:^
         version: link:../keystone
-      '@solana/wallet-adapter-krystal':
+      sol-wallet-adapter-krystal:
         specifier: workspace:^
         version: link:../krystal
-      '@solana/wallet-adapter-ledger':
+      sol-wallet-adapter-ledger:
         specifier: workspace:^
         version: link:../ledger
-      '@solana/wallet-adapter-mathwallet':
+      sol-wallet-adapter-mathwallet:
         specifier: workspace:^
         version: link:../mathwallet
-      '@solana/wallet-adapter-neko':
+      sol-wallet-adapter-neko:
         specifier: workspace:^
         version: link:../neko
-      '@solana/wallet-adapter-nightly':
+      sol-wallet-adapter-nightly:
         specifier: workspace:^
         version: link:../nightly
-      '@solana/wallet-adapter-nufi':
+      sol-wallet-adapter-nufi:
         specifier: workspace:^
         version: link:../nufi
-      '@solana/wallet-adapter-onto':
+      sol-wallet-adapter-onto:
         specifier: workspace:^
         version: link:../onto
-      '@solana/wallet-adapter-particle':
+      sol-wallet-adapter-particle:
         specifier: workspace:^
         version: link:../particle
-      '@solana/wallet-adapter-phantom':
+      sol-wallet-adapter-phantom:
         specifier: workspace:^
         version: link:../phantom
-      '@solana/wallet-adapter-safepal':
+      sol-wallet-adapter-safepal:
         specifier: workspace:^
         version: link:../safepal
-      '@solana/wallet-adapter-saifu':
+      sol-wallet-adapter-saifu:
         specifier: workspace:^
         version: link:../saifu
-      '@solana/wallet-adapter-salmon':
+      sol-wallet-adapter-salmon:
         specifier: workspace:^
         version: link:../salmon
-      '@solana/wallet-adapter-sky':
+      sol-wallet-adapter-sky:
         specifier: workspace:^
         version: link:../sky
-      '@solana/wallet-adapter-solflare':
+      sol-wallet-adapter-solflare:
         specifier: workspace:^
         version: link:../solflare
-      '@solana/wallet-adapter-solong':
+      sol-wallet-adapter-solong:
         specifier: workspace:^
         version: link:../solong
-      '@solana/wallet-adapter-spot':
+      sol-wallet-adapter-spot:
         specifier: workspace:^
         version: link:../spot
-      '@solana/wallet-adapter-tokenary':
+      sol-wallet-adapter-tokenary:
         specifier: workspace:^
         version: link:../tokenary
-      '@solana/wallet-adapter-tokenpocket':
+      sol-wallet-adapter-tokenpocket:
         specifier: workspace:^
         version: link:../tokenpocket
-      '@solana/wallet-adapter-torus':
+      sol-wallet-adapter-torus:
         specifier: workspace:^
         version: link:../torus
-      '@solana/wallet-adapter-trezor':
+      sol-wallet-adapter-trezor:
         specifier: workspace:^
         version: link:../trezor
-      '@solana/wallet-adapter-trust':
+      sol-wallet-adapter-trust:
         specifier: workspace:^
         version: link:../trust
-      '@solana/wallet-adapter-unsafe-burner':
+      sol-wallet-adapter-unsafe-burner:
         specifier: workspace:^
         version: link:../unsafe-burner
-      '@solana/wallet-adapter-walletconnect':
+      sol-wallet-adapter-walletconnect:
         specifier: workspace:^
         version: link:../walletconnect
-      '@solana/wallet-adapter-xdefi':
+      sol-wallet-adapter-xdefi:
         specifier: workspace:^
         version: link:../xdefi
     devDependencies:
@@ -1286,7 +1286,7 @@ importers:
 
   packages/wallets/xdefi:
     dependencies:
-      '@solana/wallet-adapter-base':
+      sol-wallet-adapter-base:
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
@@ -4316,6 +4316,12 @@ packages:
     peerDependencies:
       typescript: '>=5'
 
+  '@solana/wallet-adapter-base@0.9.24':
+    resolution: {integrity: sha512-f3kwHF/2Lx3YgcO37B45MM46YLFy4QkdLemZ+N/0SwLAnSfhq3+Vb9bC5vuoupMJ/onos09TIDeIxRdg/+51kw==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@solana/web3.js': ^1.77.3
+
   '@solana/wallet-standard-chains@1.1.0':
     resolution: {integrity: sha512-IRJHf94UZM8AaRRmY18d34xCJiVPJej1XVwXiTjihHnmwD0cxdQbc/CKjrawyqFyQAKJx7raE5g9mnJsAdspTg==}
     engines: {node: '>=16'}
@@ -4339,7 +4345,7 @@ packages:
     resolution: {integrity: sha512-bkCPtOHWMXsCpqudoOQ2BSMAJQAcPrgAApDROGI4zpPIM1GI8WA7QslS9MJgSvkWKIRIUdf1r6YnpVSwT6c8sw==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/wallet-adapter-base': workspace:^
+      '@solana/wallet-adapter-base': '*'
       react: '*'
 
   '@solana/web3.js@1.78.0':
@@ -14339,12 +14345,13 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@fractalwagmi/solana-wallet-adapter@0.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@fractalwagmi/solana-wallet-adapter@0.1.1(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@fractalwagmi/popup-connection': 1.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@solana/wallet-adapter-base': link:packages/core/base
+      '@solana/wallet-adapter-base': 0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))
       bs58: 5.0.0
     transitivePeerDependencies:
+      - '@solana/web3.js'
       - react
       - react-dom
 
@@ -16242,7 +16249,7 @@ snapshots:
     dependencies:
       '@react-native-async-storage/async-storage': 1.19.1(react-native@0.72.3(@babel/core@7.22.9)(@babel/preset-env@7.22.9(@babel/core@7.22.9))(bufferutil@4.0.7)(react@18.2.0)(utf-8-validate@5.0.10))
       '@solana-mobile/mobile-wallet-adapter-protocol-web3js': 2.0.1(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(react-native@0.72.3(@babel/core@7.22.9)(@babel/preset-env@7.22.9(@babel/core@7.22.9))(bufferutil@4.0.7)(react@18.2.0)(utf-8-validate@5.0.10))
-      '@solana/wallet-adapter-base': link:packages/core/base
+      '@solana/wallet-adapter-base': 0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))
       '@solana/web3.js': 1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       js-base64: 3.7.5
     transitivePeerDependencies:
@@ -16937,6 +16944,14 @@ snapshots:
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
+  '@solana/wallet-adapter-base@0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@solana/wallet-standard-features': 1.1.0
+      '@solana/web3.js': 1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
+      '@wallet-standard/base': 1.0.1
+      '@wallet-standard/features': 1.0.3
+      eventemitter3: 4.0.7
+
   '@solana/wallet-standard-chains@1.1.0':
     dependencies:
       '@wallet-standard/base': 1.0.1
@@ -16954,7 +16969,7 @@ snapshots:
 
   '@solana/wallet-standard-wallet-adapter-base@1.1.0(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)':
     dependencies:
-      '@solana/wallet-adapter-base': link:packages/core/base
+      '@solana/wallet-adapter-base': 0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))
       '@solana/wallet-standard-chains': 1.1.0
       '@solana/wallet-standard-features': 1.1.0
       '@solana/wallet-standard-util': 1.1.0
@@ -16965,9 +16980,9 @@ snapshots:
       '@wallet-standard/wallet': 1.0.1
       bs58: 6.0.0
 
-  '@solana/wallet-standard-wallet-adapter-react@1.1.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)(react@18.2.0)':
+  '@solana/wallet-standard-wallet-adapter-react@1.1.0(@solana/wallet-adapter-base@0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)))(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)(react@18.2.0)':
     dependencies:
-      '@solana/wallet-adapter-base': link:packages/core/base
+      '@solana/wallet-adapter-base': 0.9.24(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))
       '@solana/wallet-standard-wallet-adapter-base': 1.1.0(@solana/web3.js@1.78.0(bufferutil@4.0.7)(utf-8-validate@5.0.10))(bs58@6.0.0)
       '@wallet-standard/app': 1.0.1
       '@wallet-standard/base': 1.0.1

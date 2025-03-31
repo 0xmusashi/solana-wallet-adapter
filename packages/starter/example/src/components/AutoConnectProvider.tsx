@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@solana/wallet-adapter-react';
+import { useLocalStorage } from 'sol-wallet-adapter-react';
 import type { FC, ReactNode } from 'react';
 import React, { createContext, useContext } from 'react';
 

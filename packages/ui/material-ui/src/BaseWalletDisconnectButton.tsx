@@ -1,5 +1,5 @@
 import type { ButtonProps } from '@mui/material';
-import { useWalletDisconnectButton } from '@solana/wallet-adapter-base-ui';
+import { useWalletDisconnectButton } from 'sol-wallet-adapter-base-ui';
 import React from 'react';
 import { BaseWalletConnectionButton } from './BaseWalletConnectionButton.js';
 

@@ -1,4 +1,4 @@
-import type { Wallet } from '@solana/wallet-adapter-react';
+import type { Wallet } from 'sol-wallet-adapter-react';
 import type { MenuItemProps } from 'antd';
 import { Button, Menu } from 'antd';
 import type { FC, MouseEventHandler } from 'react';

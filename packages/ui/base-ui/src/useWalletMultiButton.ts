@@ -1,4 +1,4 @@
-import { useWallet, type Wallet } from '@solana/wallet-adapter-react';
+import { useWallet, type Wallet } from 'sol-wallet-adapter-react';
 import type { PublicKey } from '@solana/web3.js';
 import { useCallback } from 'react';
 

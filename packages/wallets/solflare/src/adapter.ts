@@ -1,4 +1,4 @@
-import type { WalletAdapterNetwork, WalletName } from '@solana/wallet-adapter-base';
+import type { WalletAdapterNetwork, WalletName } from 'sol-wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     WalletConfigError,
@@ -18,7 +18,7 @@ import {
     isVersionedTransaction,
     scopePollingDetectionStrategy,
     type SendTransactionOptions,
-} from '@solana/wallet-adapter-base';
+} from 'sol-wallet-adapter-base';
 import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
 import { PublicKey, type Connection, type TransactionSignature } from '@solana/web3.js';
 import type { default as Solflare } from '@solflare-wallet/sdk';

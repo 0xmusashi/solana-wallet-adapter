@@ -1,5 +1,5 @@
 {
-    "name": "@solana/wallet-adapter-ant-design",
+    "name": "sol-wallet-adapter-ant-design",
     "version": "0.11.33",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
@@ -43,9 +43,9 @@
         "react-dom": "*"
     },
     "dependencies": {
-        "@solana/wallet-adapter-base": "workspace:^",
-        "@solana/wallet-adapter-base-ui": "workspace:^",
-        "@solana/wallet-adapter-react": "workspace:^"
+        "sol-wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base-ui": "workspace:^",
+        "sol-wallet-adapter-react": "workspace:^"
     },
     "devDependencies": {
         "@ant-design/icons": "^4.8.0",

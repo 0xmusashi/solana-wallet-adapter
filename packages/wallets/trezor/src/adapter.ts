@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from 'sol-wallet-adapter-base';
 import {
     BaseSignerWalletAdapter,
     WalletAccountError,
@@ -12,7 +12,7 @@ import {
     WalletReadyState,
     WalletSignTransactionError,
     isVersionedTransaction,
-} from '@solana/wallet-adapter-base';
+} from 'sol-wallet-adapter-base';
 import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
 import { PublicKey } from '@solana/web3.js';
 import type {

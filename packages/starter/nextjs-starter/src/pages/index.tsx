@@ -6,11 +6,11 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 
 const WalletDisconnectButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-react-ui')).WalletDisconnectButton,
+    async () => (await import('sol-wallet-adapter-react-ui')).WalletDisconnectButton,
     { ssr: false }
 );
 const WalletMultiButtonDynamic = dynamic(
-    async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
+    async () => (await import('sol-wallet-adapter-react-ui')).WalletMultiButton,
     { ssr: false }
 );
 

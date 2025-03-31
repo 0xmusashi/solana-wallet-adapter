@@ -1,4 +1,4 @@
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
+import { WalletNotConnectedError } from 'sol-wallet-adapter-base';
 import { SOLANA_DEVNET_CHAIN, SOLANA_MAINNET_CHAIN, SOLANA_TESTNET_CHAIN } from '@solana/wallet-standard-chains';
 import {
     SolanaSignAndSendTransaction,

@@ -9,7 +9,7 @@ import {
     WalletNotConnectedError,
     WalletNotReadyError,
     WalletReadyState,
-} from '@solana/wallet-adapter-base';
+} from 'sol-wallet-adapter-base';
 import { type PublicKey } from '@solana/web3.js';
 import React, { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { WalletNotSelectedError } from './errors.js';

@@ -1,8 +1,9 @@
 {
     "private": true,
-    "name": "@solana/wallet-adapter",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "name": "sol-wallet-adapter",
+    "version": "0.1.0",
+    "author": "0xmusashi",
+    "repository": "https://github.com/0xmusashi/solana-wallet-adapter",
     "license": "Apache-2.0",
     "engines": {
         "node": ">=20",
@@ -52,7 +53,7 @@
         "@ledgerhq/errors": "6.16.3",
         "@ledgerhq/hw-transport": "6.27.1",
         "@ledgerhq/hw-transport-webhid": "6.27.1",
-        "@solana/wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base": "workspace:^",
         "@types/web": "npm:typescript@~4.7.4",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12"
@@ -62,7 +63,7 @@
         "@ledgerhq/errors": "6.16.3",
         "@ledgerhq/hw-transport": "6.27.1",
         "@ledgerhq/hw-transport-webhid": "6.27.1",
-        "@solana/wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base": "workspace:^",
         "@types/web": "npm:typescript@~4.7.4",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12"

@@ -1,6 +1,6 @@
 import type { default as Transport } from '@ledgerhq/hw-transport';
 import { StatusCodes, TransportStatusError } from '@ledgerhq/hw-transport';
-import { isVersionedTransaction } from '@solana/wallet-adapter-base';
+import { isVersionedTransaction } from 'sol-wallet-adapter-base';
 import type { Transaction, VersionedTransaction } from '@solana/web3.js';
 import { PublicKey } from '@solana/web3.js';
 import './polyfills/index.js';

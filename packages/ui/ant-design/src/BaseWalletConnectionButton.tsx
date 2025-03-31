@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from 'sol-wallet-adapter-base';
 import type { ButtonProps } from 'antd';
 import { Button } from 'antd';
 import React from 'react';

@@ -1,5 +1,5 @@
 {
-    "name": "@solana/wallet-adapter-material-ui",
+    "name": "sol-wallet-adapter-material-ui",
     "version": "0.16.35",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
@@ -39,9 +39,9 @@
         "react-dom": "*"
     },
     "dependencies": {
-        "@solana/wallet-adapter-base": "workspace:^",
-        "@solana/wallet-adapter-base-ui": "workspace:^",
-        "@solana/wallet-adapter-react": "workspace:^"
+        "sol-wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base-ui": "workspace:^",
+        "sol-wallet-adapter-react": "workspace:^"
     },
     "devDependencies": {
         "@emotion/react": "^11.11.1",

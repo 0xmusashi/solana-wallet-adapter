@@ -11,7 +11,7 @@ import {
     type WalletName,
     WalletNotReadyError,
     WalletReadyState,
-} from '@solana/wallet-adapter-base';
+} from 'sol-wallet-adapter-base';
 import { PublicKey } from '@solana/web3.js';
 import React, { createRef, forwardRef, useImperativeHandle } from 'react';
 import { createRoot } from 'react-dom/client';

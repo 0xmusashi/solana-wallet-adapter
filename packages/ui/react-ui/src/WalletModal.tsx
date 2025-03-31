@@ -1,7 +1,7 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
-import { WalletReadyState } from '@solana/wallet-adapter-base';
-import type { Wallet } from '@solana/wallet-adapter-react';
-import { useWallet } from '@solana/wallet-adapter-react';
+import type { WalletName } from 'sol-wallet-adapter-base';
+import { WalletReadyState } from 'sol-wallet-adapter-base';
+import type { Wallet } from 'sol-wallet-adapter-react';
+import { useWallet } from 'sol-wallet-adapter-react';
 import type { FC, MouseEvent } from 'react';
 import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

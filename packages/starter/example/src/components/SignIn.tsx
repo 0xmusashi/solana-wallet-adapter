@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { useWallet } from '@solana/wallet-adapter-react';
+import { useWallet } from 'sol-wallet-adapter-react';
 import type { SolanaSignInInput } from '@solana/wallet-standard-features';
 import { verifySignIn } from '@solana/wallet-standard-util';
 import bs58 from 'bs58';

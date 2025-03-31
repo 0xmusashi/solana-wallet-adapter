@@ -1,5 +1,5 @@
 {
-    "name": "@solana/wallet-adapter-ledger",
+    "name": "sol-wallet-adapter-ledger",
     "version": "0.9.26",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
@@ -38,7 +38,7 @@
         "@ledgerhq/devices": "6.27.1",
         "@ledgerhq/hw-transport": "6.27.1",
         "@ledgerhq/hw-transport-webhid": "6.27.1",
-        "@solana/wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base": "workspace:^",
         "buffer": "^6.0.3"
     },
     "devDependencies": {

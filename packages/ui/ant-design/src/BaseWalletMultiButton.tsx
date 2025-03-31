@@ -3,7 +3,7 @@ import {
     DisconnectOutlined as DisconnectIcon,
     SwapOutlined as SwitchIcon,
 } from '@ant-design/icons';
-import { useWalletMultiButton } from '@solana/wallet-adapter-base-ui';
+import { useWalletMultiButton } from 'sol-wallet-adapter-base-ui';
 import type { ButtonProps } from 'antd';
 import { Dropdown, Menu } from 'antd';
 import React, { useMemo } from 'react';

@@ -1,4 +1,4 @@
-import type { EventEmitter, SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, SendTransactionOptions, WalletName } from 'sol-wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     isVersionedTransaction,
@@ -14,7 +14,7 @@ import {
     WalletReadyState,
     WalletSendTransactionError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
+} from 'sol-wallet-adapter-base';
 import type {
     Connection,
     SendOptions,

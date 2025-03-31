@@ -1,5 +1,5 @@
 {
-    "name": "@solana/wallet-adapter-unsafe-burner",
+    "name": "sol-wallet-adapter-unsafe-burner",
     "version": "0.1.8",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "@noble/curves": "^1.1.0",
-        "@solana/wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base": "workspace:^",
         "@solana/wallet-standard-features": "^1.1.0",
         "@solana/wallet-standard-util": "^1.1.0"
     },

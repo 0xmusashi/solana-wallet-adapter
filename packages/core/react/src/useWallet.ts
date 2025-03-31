@@ -6,7 +6,7 @@ import {
     type WalletAdapterProps,
     type WalletName,
     type WalletReadyState,
-} from '@solana/wallet-adapter-base';
+} from 'sol-wallet-adapter-base';
 import { type PublicKey } from '@solana/web3.js';
 import { createContext, useContext } from 'react';
 
