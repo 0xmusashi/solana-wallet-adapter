@@ -38,6 +38,30 @@ increment_version() {
   echo "$major.$minor.$patch"
 }
 
+# Function to update dependency versions in all package.json files
+update_dependency_versions() {
+  local package_name=$1
+  local new_version=$2
+  
+  echo "Updating dependencies for $package_name to version $new_version..."
+  
+  # Find all package.json files that might have this dependency
+  find packages -name "package.json" | while read -r file; do
+    # Check if the file contains the package as a dependency
+    if grep -q "\"$package_name\":" "$file"; then
+      echo "Updating $package_name in $file to version $new_version"
+      
+      # For macOS, use sed -i '' instead
+      if [[ "$OSTYPE" == "darwin"* ]]; then
+        # Update both dependencies and devDependencies
+        sed -i '' "s/\"$package_name\": \"[^\"]*\"/\"$package_name\": \"^$new_version\"/g" "$file"
+      else
+        sed -i "s/\"$package_name\": \"[^\"]*\"/\"$package_name\": \"^$new_version\"/g" "$file"
+      fi
+    fi
+  done
+}
+
 # Get current version from a package.json file
 get_current_version() {
   # Check if packages/core/base/package.json exists
@@ -116,6 +140,8 @@ publish_package() {
   # Try to publish and capture any errors
   if npm publish --access public; then
     echo "✅ Successfully published $package_name@$NEW_VERSION"
+    # After successful publish, update dependencies in other packages
+    update_dependency_versions "$package_name" "$NEW_VERSION"
   else
     echo "❌ Failed to publish $package_name@$NEW_VERSION" | tee -a "../../$error_log"
   fi
