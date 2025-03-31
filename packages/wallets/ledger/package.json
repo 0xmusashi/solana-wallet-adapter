@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-ledger",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
     "license": "Apache-2.0",
@@ -38,7 +38,7 @@
         "@ledgerhq/devices": "6.27.1",
         "@ledgerhq/hw-transport": "6.27.1",
         "@ledgerhq/hw-transport-webhid": "6.27.1",
-        "sol-wallet-adapter-base": "^0.1.1",
+        "sol-wallet-adapter-base": "workspace:^",
         "buffer": "^6.0.3"
     },
     "devDependencies": {

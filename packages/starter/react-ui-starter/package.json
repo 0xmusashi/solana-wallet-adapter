@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-react-ui-starter",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
     "license": "Apache-2.0",
@@ -25,10 +25,10 @@
         "start": "parcel src/index.html"
     },
     "dependencies": {
-        "sol-wallet-adapter-base": "^0.1.1",
-        "sol-wallet-adapter-react": "^0.1.0",
-        "sol-wallet-adapter-react-ui": "^0.1.0",
-        "sol-wallet-adapter-wallets": "^0.1.0",
+        "sol-wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-react": "workspace:^",
+        "sol-wallet-adapter-react-ui": "workspace:^",
+        "sol-wallet-adapter-wallets": "workspace:^",
         "@solana/web3.js": "^1.77.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"

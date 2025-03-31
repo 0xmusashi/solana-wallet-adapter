@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-react",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": "0xmusashi",
     "repository": "https://github.com/0xmusashi/solana-wallet-adapter",
     "license": "Apache-2.0",
@@ -38,7 +38,7 @@
     },
     "dependencies": {
         "@solana-mobile/wallet-adapter-mobile": "^2.0.0",
-        "sol-wallet-adapter-base": "^0.1.1",
+        "sol-wallet-adapter-base": "workspace:^",
         "@solana/wallet-standard-wallet-adapter-react": "^1.1.0"
     },
     "devDependencies": {

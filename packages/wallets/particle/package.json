@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-particle",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
     "license": "Apache-2.0",
@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "@particle-network/solana-wallet": "^1.3.2",
-        "sol-wallet-adapter-base": "^0.1.1"
+        "sol-wallet-adapter-base": "workspace:^"
     },
     "devDependencies": {
         "@metamask/eth-sig-util": "^7.0.1",

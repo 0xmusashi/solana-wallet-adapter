@@ -140,8 +140,6 @@ publish_package() {
   # Try to publish and capture any errors
   if npm publish --access public; then
     echo "✅ Successfully published $package_name@$NEW_VERSION"
-    # After successful publish, update dependencies in other packages
-    update_dependency_versions "$package_name" "$NEW_VERSION"
   else
     echo "❌ Failed to publish $package_name@$NEW_VERSION" | tee -a "../../$error_log"
   fi
@@ -154,30 +152,48 @@ echo "Publishing packages in the correct order..."
 
 # 1. Publish base
 publish_package "packages/core/base"
+# Update dependencies for base package
+update_dependency_versions "sol-wallet-adapter-base" "$NEW_VERSION"
 
 # 2. Publish react
 publish_package "packages/core/react"
+# Update dependencies for react package
+update_dependency_versions "sol-wallet-adapter-react" "$NEW_VERSION"
 
 # 3. Publish base-ui
 publish_package "packages/ui/base-ui"
+# Update dependencies for base-ui package
+update_dependency_versions "sol-wallet-adapter-base-ui" "$NEW_VERSION"
 
 # 4. Publish wallet adapters - iterate through all wallets
 echo "Publishing individual wallet adapters..."
 for wallet_dir in packages/wallets/*; do
   if [ -d "$wallet_dir" ] && [ "$(basename "$wallet_dir")" != "wallets" ]; then
     publish_package "$wallet_dir"
+    # Update dependencies for each wallet adapter
+    wallet_name=$(basename "$wallet_dir")
+    update_dependency_versions "sol-wallet-adapter-$wallet_name" "$NEW_VERSION"
   fi
 done
 
 # 5. Publish wallets (main wallet package)
 publish_package "packages/wallets/wallets"
+# Update dependencies for wallets package
+update_dependency_versions "sol-wallet-adapter-wallets" "$NEW_VERSION"
 
 # 6. Publish UI packages
 publish_package "packages/ui/react-ui"
+# Update dependencies for react-ui package
+update_dependency_versions "sol-wallet-adapter-react-ui" "$NEW_VERSION"
+
 publish_package "packages/ui/material-ui"
+# Update dependencies for material-ui package
+update_dependency_versions "sol-wallet-adapter-material-ui" "$NEW_VERSION"
 
 if [ -d "packages/ui/ant-design" ]; then
   publish_package "packages/ui/ant-design"
+  # Update dependencies for ant-design package
+  update_dependency_versions "sol-wallet-adapter-ant-design" "$NEW_VERSION"
 fi
 
 # Restore workspace references for development
