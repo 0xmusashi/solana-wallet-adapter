@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-unsafe-burner",
-    "version": "0.1.8",
+    "version": "0.1.2",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
     "license": "Apache-2.0",
@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "@noble/curves": "^1.1.0",
-        "sol-wallet-adapter-base": "workspace:^",
+        "sol-wallet-adapter-base": "^0.1.1",
         "@solana/wallet-standard-features": "^1.1.0",
         "@solana/wallet-standard-util": "^1.1.0"
     },

@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-fractal",
-    "version": "0.1.9",
+    "version": "0.1.2",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
     "license": "Apache-2.0",
@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "@fractalwagmi/solana-wallet-adapter": "^0.1.1",
-        "sol-wallet-adapter-base": "workspace:^"
+        "sol-wallet-adapter-base": "^0.1.1"
     },
     "devDependencies": {
         "@solana/web3.js": "^1.77.3",

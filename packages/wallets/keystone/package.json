@@ -1,6 +1,6 @@
 {
     "name": "sol-wallet-adapter-keystone",
-    "version": "0.1.16",
+    "version": "0.1.2",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/anza-xyz/wallet-adapter",
     "license": "Apache-2.0",
@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "@keystonehq/sol-keyring": "^0.20.0",
-        "sol-wallet-adapter-base": "workspace:^"
+        "sol-wallet-adapter-base": "^0.1.1"
     },
     "devDependencies": {
         "@solana/web3.js": "^1.77.3",
