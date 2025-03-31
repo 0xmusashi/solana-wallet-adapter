@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "sol-wallet-adapter",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "0xmusashi",
     "repository": "https://github.com/0xmusashi/solana-wallet-adapter",
     "license": "Apache-2.0",
@@ -67,5 +67,9 @@
         "@types/web": "npm:typescript@~4.7.4",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12"
+    },
+    "dependencies": {
+        "@solana/spl-token": "^0.4.13",
+        "axios": "^1.8.4"
     }
 }

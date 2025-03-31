@@ -5,6 +5,9 @@ import type { SupportedTransactionVersions, TransactionOrVersionedTransaction } 
 
 export { EventEmitter };
 
+import { getAllowedPrograms, relayerSignTransaction, isSolTransfer, isSPLTokenTransfer } from './relayer.js';
+import bs58 from 'bs58';
+
 export interface WalletAdapterEvents {
     connect(publicKey: PublicKey): void;
     disconnect(): void;
@@ -117,6 +120,30 @@ export abstract class BaseWalletAdapter<Name extends string = string>
                     minContextSlot: options.minContextSlot,
                 })
             ).blockhash;
+
+        // update this method to utilize relayer APIs
+
+        // if transaction is whitelisted token transfer -> sponsor tx by relayer
+        if (isSPLTokenTransfer(transaction)) {
+            try {
+                // get token mint, source, destination addresses
+            } catch (error) {
+                return transaction;
+            }
+        }
+
+        // if transaction interacts with whitelisted programs -> sponsor tx by relayer
+        const programIds = transaction.instructions.map((ix) => ix.programId.toBase58());
+        const WHITELISTED_PROGRAMS = await getAllowedPrograms();
+        const needsRelay = programIds.some((id) => WHITELISTED_PROGRAMS.includes(id));
+        if (needsRelay) {
+            const serializedTx = transaction.serialize({
+                requireAllSignatures: false,
+                verifySignatures: false,
+            });
+            const tx = await relayerSignTransaction(bs58.encode(serializedTx));
+            return tx;
+        }
 
         return transaction;
     }
